@@ -28,8 +28,8 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="src\Questions.txt" />
-    <Text Include="src\answers.txt" />
-    <Text Include="src\userAnswers.txt" />
+    <Text Include="Questions.txt" />
+    <Text Include="Answers.txt" />
+    <Text Include="userAnswers.txt" />
   </ItemGroup>
 </Project>

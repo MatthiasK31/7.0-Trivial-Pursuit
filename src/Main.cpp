@@ -2,19 +2,64 @@
 //
 
 #include <iostream>
+#include <iomanip>
+#include <fstream>
+#include <string>
+#include <vector>
+#include "Header.h"
+
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    //input and output streams
+    ifstream fin;
+    ofstream fout;
+
+    //variables
+    string line;
+    char answerChoice;
+    string letters = "abcd";
+    bool yesOrNo;
+
+    //vectors
+    vector<string> questions;
+    vector<string> answers;
+    vector<char> letter;
+
+    for (int i = 0; i < 4; i++) {
+        letter.push_back(letters.at(i));
+    }
+
+
+    fout.open("userAnswers.txt");
+    fin.open("Questions.txt");
+
+    
+
+    while (!fin.eof()) {
+        getline(fin, line);
+        questions.push_back(line);
+        //cout << line << endl;
+        for (int i = 0; i < 4; i++) {
+            getline(fin, line);
+            answers.push_back(line);
+            //cout << line << endl;
+        }
+
+        cout << "Please enter your choice (a, b, c, d): ";
+        cin >> answerChoice;
+        while (yesOrNo) {
+            cout << "\tEnter a valid course number:\t";
+            cin >> answerChoice;
+            yesOrNo = checkValidNumInput(answerChoice);
+        }
+        cout << endl;
+    }
+    
+    fout << answerChoice << endl;
+
+    fout.close();
+    fin.close();
+    return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
