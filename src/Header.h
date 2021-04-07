@@ -1,5 +1,5 @@
 #include <string>
 
 #pragma once
-bool checkValidNumInput(char);
+bool checkValidLetterInput(char);
 

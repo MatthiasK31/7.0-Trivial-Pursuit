@@ -2,11 +2,23 @@
 #include <iomanip>
 #include <iostream>
 
-bool checkValidNumInput(char tester)
+bool checkValidLetterInput(char tester)
 {
 	//try-cathc to validate input
 	try {
-		if (tester != tolower('a') || tester != tolower('b') || tester != tolower('c') || tester != tolower('d')) {
+		if (tester == tolower('A')) {
+			return false;
+		}
+		else if (tester == tolower('B')) {
+			return false;
+		}
+		else if (tester == tolower('C')) {
+			return false;
+		}
+		else if (tester == tolower('D')) {
+			return false;
+		}
+		else {
 			return true;
 		}
 	}
@@ -15,4 +27,5 @@ bool checkValidNumInput(char tester)
 		return true;
 	}
 	return false;
+	
 }

@@ -17,10 +17,10 @@ int main()
     ofstream fout;
 
     //variables
-    string line;
+    string line, letters = "abcd";
+    int questionCount = 1;
     char answerChoice;
-    string letters = "abcd";
-    bool yesOrNo;
+    bool yesOrNo = true;
 
     //vectors
     vector<string> questions;
@@ -40,20 +40,24 @@ int main()
     while (!fin.eof()) {
         getline(fin, line);
         questions.push_back(line);
-        //cout << line << endl;
+        cout << "Question " << questionCount << ": " << line << endl;
         for (int i = 0; i < 4; i++) {
             getline(fin, line);
             answers.push_back(line);
-            //cout << line << endl;
+            cout << "\t" << letter.at(i) << ": " << line << endl;
         }
 
         cout << "Please enter your choice (a, b, c, d): ";
         cin >> answerChoice;
         while (yesOrNo) {
-            cout << "\tEnter a valid course number:\t";
+            cout << "\tEnter a valid answer choice:\t";
             cin >> answerChoice;
-            yesOrNo = checkValidNumInput(answerChoice);
+            yesOrNo = checkValidLetterInput(answerChoice);
+            if (yesOrNo == false) {
+                break;
+            }
         }
+        yesOrNo = true;
         cout << endl;
     }
     
