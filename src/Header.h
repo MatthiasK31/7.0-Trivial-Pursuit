@@ -2,4 +2,3 @@
 
 #pragma once
 bool checkValidLetterInput(char);
-
