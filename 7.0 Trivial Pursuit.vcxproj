@@ -148,6 +148,7 @@
   <ItemGroup>
     <Text Include="Answers.txt" />
     <Text Include="Questions.txt" />
+    <Text Include="Text.txt" />
     <Text Include="userAnswers.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

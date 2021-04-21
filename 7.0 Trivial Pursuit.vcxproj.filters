@@ -31,5 +31,6 @@
     <Text Include="Questions.txt" />
     <Text Include="Answers.txt" />
     <Text Include="userAnswers.txt" />
+    <Text Include="Text.txt" />
   </ItemGroup>
 </Project>

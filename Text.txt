@@ -113,7 +113,7 @@ int main()
             cout << endl;
         }
         answers.push_back(answerCluster);
-
+        
         //prompt user and ask if there is someone else who is going to play
         string e;
         cout << "Is there another person that wants to play? Enter a Y if so and any other letter to break. ";
