@@ -153,19 +153,11 @@ int main()
     fout.close();
 
 
-    printf("%-s\t\t%-s\n", "Name:", "Score");
+    printf("\n%-s\t\t%-s\n", "Name:", "Score");
     for (int i = 0; i < playerNames.size(); i++) {
         printf("%-s\t\t%-.0f%s\n", playerNames.at(i).c_str(), scoring.at(i), "%");
     }
     
-
-
-
-
-
-
-
-
     return 0;
 }
 
